@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\ContactFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ContactSeeder extends Seeder
+class PhotoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +14,6 @@ class ContactSeeder extends Seeder
      */
     public function run()
     {
-        ContactFactory::class;
+        //
     }
 }

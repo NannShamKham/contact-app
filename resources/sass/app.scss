@@ -1,0 +1,130 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+//accordion
+
+$accordion-border-width:0rem;
+$accordion-bg:white;
+$accordion-button-focus-border-color:white;
+$accordion-button-focus-box-shadow:white;
+$accordion-button-active-bg:white;
+
+//fonts
+$font-family-sans-serif:'Roboto', sans-serif;
+@import 'bootstrap/scss/bootstrap';
+
+//bootstrap icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+//form
+.contact-photo{
+    object-fit: cover;
+    object-position: top;
+}
+
+.user-camera{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+//search bar
+
+.search-input:focus{
+    outline: none;
+
+}
+
+
+.form-input{
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+   border-bottom: 2px solid var(--bs-light);
+    border-radius: 0px !important;
+    transition: 0.5s;
+
+}
+.form-input:focus{
+    box-shadow: none !important;
+    border-bottom-color: var(--bs-primary);
+
+}
+//photo
+.photoDiv{
+    z-index: 1000;
+    width: 75%;
+}
+
+//navbar
+.navbar{
+    z-index: 1000;
+}
+
+
+//index
+
+.trows{
+    cursor: pointer;
+}
+.dot-icon{
+    visibility: hidden ;
+}
+.delCheckbox{
+    display: none;
+
+    transition: 0.1s;
+    width: 20px;
+    height: 20px;
+}
+.contact-people{
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: 0.1s;
+    line-height: 30px;
+}
+
+.delCheckbox:checked{
+    display: block !important;
+
+}
+
+.trows:hover .delCheckbox{
+    display: block !important;
+
+}
+.trows:hover .dot-icon{
+    visibility: visible;
+}
+
+:is(.trows:hover) .contact-people{
+    display: none !important;
+}
+:is(.delCheckbox:checked) .contact-people{
+    display: none !important;
+}
+
+.delCheckbox:checked .table>thead{
+    display: none !important;
+}
+
+
+.control-btns{
+    visibility:hidden ;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+}
+
+.trows:hover .control-btns{
+    visibility: visible !important;
+    outline: none;
+}
+
+

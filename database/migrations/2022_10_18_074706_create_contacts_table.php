@@ -18,14 +18,15 @@ return new class extends Migration
 
             $table->string('fname');
             $table->string('lname');
+            $table->string('fullName');
             $table->string('phone');
             $table->string('email');
             $table->string('photo')->nullable();
             $table->date('birthday')->nullable();
             $table->string('company')->nullable();
-            $table->string('job-title')->nullable();
-            $table->double('notes')->nullable();
-
+            $table->string('jobTitle')->nullable();
+            $table->string('notes')->nullable();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

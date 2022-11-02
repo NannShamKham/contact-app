@@ -13,7 +13,7 @@ class UpdateContactRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class UpdateContactRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "first"=> "required|min:3",
+            "last"=> "required|min:3",
+            "company"=> "nullable|min:3",
+            "job"=> "nullable|min:3",
+            "email"=> "required|min:3|email",
+            "phone"=> "required|min:5",
+//            "photo"=>"mimes:jpeg,png,jpg,gif,svg|max:2048",
+        "photo"=>"nullable",
+            "birthday"=> "nullable|date"
         ];
     }
 }
